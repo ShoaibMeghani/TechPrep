@@ -17,8 +17,8 @@ public class LinkedListImpl<T> {
         }
     }
 
-    public Link<T> head;
-    public int size;
+    private Link<T> head;
+    private int size;
 
 
     //Time complixity O(1)
@@ -133,6 +133,10 @@ public class LinkedListImpl<T> {
         recursivePrint(link.next);
         //print link here
 
+    }
 
+
+    public int size(){
+        return  size;
     }
 }
