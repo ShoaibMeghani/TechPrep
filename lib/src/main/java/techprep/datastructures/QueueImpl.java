@@ -30,7 +30,7 @@ public class QueueImpl<T> {
             return;
         }
 
-        rear.next = newLink;
+        newLink.next = rear;
         rear = newLink;
         size++;
     }
@@ -44,10 +44,18 @@ public class QueueImpl<T> {
         }
     }
 
+    public Link<T> front() {
+        if (front != null){
+            return  front;
+        }
+
+        return null;
+    }
 
 
 
-    public int size(){
-        return  size;
+
+    public boolean isEmpty(){
+        return  size == 0;
     }
 }
