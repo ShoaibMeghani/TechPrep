@@ -1,4 +1,4 @@
-package com.smeghani.techprep.datastructures;
+package techprep.datastructures;
 
 /**
  * Created by smeghani on 11/11/2016.
@@ -8,8 +8,8 @@ public class LinkedListImpl<T> {
 
 
     public static final class Link<T> {
-        T data;
-        Link next;
+        public T data;
+        public Link next;
 
         public Link(T data, Link next) {
             this.data = data;
@@ -138,5 +138,13 @@ public class LinkedListImpl<T> {
 
     public int size(){
         return  size;
+    }
+
+    public Link<T> getHead() {
+        return head;
+    }
+
+    public void setHead(Link<T> head) {
+        this.head = head;
     }
 }

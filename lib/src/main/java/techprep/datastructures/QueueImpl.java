@@ -1,4 +1,4 @@
-package com.smeghani.techprep.datastructures;
+package techprep.datastructures;
 
 /**
  * Created by smeghani on 11/13/2016.

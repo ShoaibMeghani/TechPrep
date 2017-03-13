@@ -1,4 +1,4 @@
-package com.smeghani.techprep.datastructures;
+package techprep.datastructures;
 
 import java.util.Stack;
 

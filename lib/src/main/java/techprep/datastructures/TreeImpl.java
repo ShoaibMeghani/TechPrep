@@ -1,6 +1,6 @@
-package com.smeghani.techprep.datastructures;
+package techprep.datastructures;
 
-import android.util.Log;
+//import android.util.Log;
 
 /**
  * Created by smeghani on 11/18/2016.
@@ -80,12 +80,23 @@ public class TreeImpl<T extends Comparable> {
         }
     }
 
+    public void dfsTraversal(Node root){
+
+    }
+
+
+
+
+
+
+
+
     public void dfsTraversalPreOrder(Node root){
 
         if (root == null){
             return;
         }
-        Log.d("node", root.data + "");
+        //Log.d("node", root.data + "");
         dfsTraversalPreOrder(root.left);
         dfsTraversalPreOrder(root.right);
     }
