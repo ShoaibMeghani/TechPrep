@@ -45,60 +45,6 @@ public class StackImpl<T> {
     }
 
 
-    public boolean isExpressionCorrect() {
 
-        Stack<String> stack = new Stack<>();
-        String expression = "(a+b)*(c-b)";
-        boolean isValid = false;
-
-        for (int i = 0; i < expression.length(); i++) {
-            String character = expression.charAt(i) + "";
-
-            if (character.equals("(") || character.equals("{") || character.equals("[")) {
-                stack.push(character + "");
-            } else if (character.equals(")") || character.equals("}") || character.equals("]")) {
-                if (stack.peek().equals(character + "")) {
-                    stack.pop();
-                }
-            }
-        }
-        if (stack.isEmpty()) {
-            isValid = true;
-        }
-        return isValid;
-    }
-
-    public void readPostFixExpression() {
-        Stack<String> stack = new Stack<>();
-        String expression = "ab+c*";
-
-
-        for (int i = 0; i<expression.length();i++){
-            String charac = expression.charAt(i)+"";
-
-            if (!charac.equals("+") && !charac.equals("-") && !charac.equals("*") && !charac.equals("/")){
-                stack.push(charac);
-
-            }else{
-                String prev = stack.peek();
-                stack.pop();
-                String prev2 = stack.peek();
-                stack.pop();
-
-                String result = prev + charac + prev2;
-                stack.push(result);
-            }
-
-        }
-    }
-
-    public void readPreFixExpression() {
-        //for prefix just iterate from right side and perform same algorithm
-
-    }
-
-    public void convertInfixToPostFix() {
-
-    }
 
 }
