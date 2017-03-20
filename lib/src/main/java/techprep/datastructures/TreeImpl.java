@@ -62,7 +62,7 @@ public class TreeImpl<T extends Comparable> {
             queue.enqueue(root);
 
             while(!queue.isEmpty()){
-                Node currentNode = queue.front().data;
+                Node currentNode = (Node) queue.front().data;
                 Node left = currentNode.left;
                 Node right = currentNode.right;
 

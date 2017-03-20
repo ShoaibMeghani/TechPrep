@@ -44,9 +44,9 @@ public class QueueImpl<T> {
         }
     }
 
-    public Link<T> front() {
+    public T front() {
         if (front != null){
-            return  front;
+            return  front.data;
         }
 
         return null;
